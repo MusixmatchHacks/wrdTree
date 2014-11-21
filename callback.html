@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+/*.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}*/
+
+
+</style>
+
+<!-- <body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><span>The&nbsp;Set&nbsp;Listener</span></a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul id="options" class="nav navbar-nav navbar-right">
+              <li><a class="option"
+                href="http://musicmachinery.com/2014/06/24/the-set-listener/"
+                id='show-about'>About</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+<div id="search" class="hero-unit">
+   <div class="container">
+    <h1> The Set Listener</h1>
+        <p class="lead">Create a Spotify playlist for your favorite artist's most recent show</p>
+        <div id="search-form" class="form-inline">
+            <input type="search" class="xform-control input-large" id="source"
+            placeholder="artist name" value="">
+            <span class="xform-control">
+                <button class="btn btn-info btn-large" id='go' type="button">  Search </button>
+            </span>
+        </div>
+        <div id="info"> </div>
+    </div>
+</div>
+
+
+<div id="about" class="reg-unit">
+  <div class="container">
+        <h1> About The Set Listener</h1>
+        The Set Listener creates
+  </div>
+</div>
+
+<div id="main" class="container">
+    <h2> <a  id='show-title'> </a> </h2>
+    <hr>
+        <button class="btn btn-info btn-large" id='save' type="button">
+            Save this playlist to Spotify
+        </button>
+    <hr>
+    <div id="song-list"> </div>
+    <hr>
+</div>
+
+<div id="footer">
+  <div class="container">
+  <small>
+    <p class="muted credit">Created by <a href="http://twitter.com/plamere">@plamere</a>.
+    Powered by <a href="http://spotify.com">Spotify</a>,
+    <a href="http://setlist.fm">Setlist.fm</a>
+    and <a href="http://the.echonest.com">The Echo Nest</a>.
+    </p>
+  </small>
+  </div>
+</div>
+
+</div>
+ </body>-->
+<body onload = "pageLoad()">
+  
+  <p id = 'SpotifyWidget'> </p>
+  <p id = "status" style = "display:inline"></p>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- <script src="jsonp.js"></script> -->
+<script src="scripts/savePlaylist.js"></script>
+<head>
+    <title> Lyrics recommendation playlist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="style.css" rel="stylesheet" />
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+     <!-- <link href="dist/sp-bootstrap.min.css" rel="stylesheet" media="screen"> -->
+</head>
+
+<script>
+
+function pageLoad()
+{
+  doit()
+  playlist_name = localStorage.getItem('playlist-name');
+  track_ids = JSON.parse(localStorage.getItem('track_ids'));
+  console.log(playlist_name)
+  console.log(track_ids)
+  addTracksToPlaylist(playlist_name,track_ids).then(function(result)
+  {
+    console.log('asd')
+    $('#status').text("Playlist saved to your profile")
+    console.log('asd')
+    // window.setTimeout(function(){
+    //   console.log('here')
+    //   window.close();
+    // }, 4000)
+  })
+}
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52694472-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+<head>
+	<title>Template</title>
+</head>
+/*.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}*/
+
+</style>
+<script src = "scripts/savePlaylist.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.0','packages':['wordtree']}]}"></script>
+<!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+
+<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script> -->
+<script type="text/javascript" src="scripts/bluebird.js"></script>
+<link rel="stylesheet" href="bootstrap-multiselect/css/bootstrap-3.2.0.min.css" type="text/css"/>
+<script type="text/javascript" src="bootstrap-multiselect/js/bootstrap-3.2.0.min.js"></script>
+<script type="text/javascript" src="bootstrap-multiselect/js/bootstrap-multiselect.js"></script>
+<link rel="stylesheet" href="bootstrap-multiselect/css/bootstrap-multiselect.css" type="text/css"/>
+<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css" /> -->
+<!-- <script src="/vendor/bootstrap-multiselect/js/bootstrap-multiselect.js"></script> -->
+
+<!-- <script src="/scripts/nlform.js"></script> -->
+
+<body >
+<!-- <header>
+	<div class="container" >
+		<img src="http://musixmatch.com/img/mxm_logo_white.png" style = "padding-left: 0%;" width="135" alt="Musixmatch" id="Musixmatch"/>
+		<p style = "display:inline; padding-left: 13.7%;font-size:19px;" >Polyglottis: Create playlists for learning foreign languages<! Polyglot: playlists to help learn foreign languages </p>
+		<a href="http://research.musixmatch.com/post/99306796630/polyglottis-playlists-for-learning-foreign-languages" style = "display:inline; padding-right: 18.6%;
+padding-top: 5px; font-size:16px;">About</a>
+	</div>
+</header> -->
+		<!-- <form id="nl-form" class="nl-form">
+		My Duolingo username is 
+		<input type="search" id="username" placeholder="username" />
+		<br />
+		and I like to listen to 
+		<select multiple="multiple" id="genre" placeholder="Select genre"  /></select>
+		<select id="genre" placeholder="Select genre"  /></select>
+		 -->
+		<!-- <button id = "makePlaylist" >Make my playlist</button> -->
+		<!-- </div>
+		<div class="nl-overlay"></div>
+		</form>
+ 		 -->
+ 		 <header class="container">
+ 		 	<!-- <div class="left"><a href="http://musixmatch.com"><img src="images/logo.png" width="165" alt="Musixmatch and Duolingo" /></a></div> -->
+ 		 	<!-- <div class="right"> -->
+	 		 	<!-- <h1>Polyglottis: Musixmatch + Duolingo</h1> -->
+	 		 	<!-- <h2>Playlists for learning foreign languages, with lyrics containing words from your Duolingo vocabulary</h2> -->
+	 		 <!-- </div> -->
+ 		 
+ 		 </header>
+		
+		 <div class = "mainForm">
+ 		     <p >
+ 		       <!-- <span class="copy">My Duolingo username is </span> -->
+ 		       <!-- <span class="inputcontainer"><input class="textinput" name="name" id="username" value="" placeholder="username"></span>  -->
+ 		       <span class="inputcontainer"><input class="textinput" name="name" id="artist" value="" style="height: 45px;text-align: center;width: 230px;" placeholder = "artist">
+ 		       </span>
+ 		       <!-- <span class="copy">.</span> -->
+ 		       <!-- <br />		 -->
+ 		      <!-- <span class="copy" style="margin-top: 10px;display: inline-block;"> And I like </span> -->
+ 		       <!-- <select  id="genre" class="dropdown" ></select> -->
+ 		       <!-- <br /> -->
+ 		       <!-- <select id = "genre" class="form-control" name="genre" multiple> </select> -->
+ 		       <!-- <span class="copy"> music.</span> -->
+ 		  	</p>
+ 		  </div>
+		<!-- <button class="button" id = "makePlaylist" >Do stuff</button> -->
+ 		
+ 		<!-- <div id = 'genreHolder' style = "display:none"><p id = 'genreText'> Select genre/s:</p></div> -->
+
+		
+		<!-- <div id = "buttonContainer">
+ 		<input type="button" value="Make playlist" id = "makePlaylist" style = "display:none"></div> -->
+ 		
+
+		<!-- <div id = "progress" style = "display:none" ><img src = 'ajax-loader.gif'> </div> -->
+		<!-- <div style="text-align: center;"> <div id = "SpotifyWidget" > </div> <button type="button" value="Save This Playlist To Spotify" id="SpotifySave" style="display: none;">SAVE THIS PLAYLIST TO SPOTIFY</button></div> -->
+		<div >
+		<div id="wordtree_basic" style=""></div>
+		
+		<!-- <div id = "metadata" style = "display:none"></div> -->
+ 		<!-- <div> <button type="button" value="Save This Playlist To Spotify" id = "SpotifySave" style = "display:none"> </div></div> -->
+ 		<!-- <footer style="text-align: center;"><div id = "status" style = "display:none"></div></footer> -->
+</body>
+
+<script src="scripts/stopwords.js"></script>
+<script src="scripts/Snowball.min.js"></script>
+<script src="scripts/music_genre_list.js"></script>
+<script src="scripts/main.js"> </script>
+<script src="scripts/home.js"></script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53134539-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
