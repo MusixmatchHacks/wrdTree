@@ -30,11 +30,11 @@
 ::-ms-selection { background: #f63; color: #fff; text-shadow: none; }
 
 body {
-    background-color: #f0f0f0;
-    background-image: url(images/bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-color: white;
+    /*background-image: url(images/bg.jpg);*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*background-position: center;*/
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2095c4', endColorstr='#1b92c0',GradientType=1 );
     color: #333;
     font-family: 'Proxima-Nova', 'Helvetica neue', Helvetica, Arial, sans-serif;
@@ -90,7 +90,7 @@ div.naturallanguageform {
     font-size: 1.5em;
 }
 div.nlfinner {
-    width: 96%;  
+    width: 96%;
     padding: 2%;
 }
 div.mainForm{
